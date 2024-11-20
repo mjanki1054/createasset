@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- bootstrap icons cdn  -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <div class="header w-100" >
+      <div class="container" style="border-bottom: 1px solid rgba(187, 187, 187, 0.347);">
+        <nav class="navbar navbar-expand-lg navbar-light private">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <img src="./logo.webp"class="logo-sm"style="width: 90px; height: 90px;"/>
+            </a>
+            <span>
+              <span class="fs-5 fw-bolder">Gram Sampati, Ramgarh</span>
+              <br />
+              <center class="fs-7">Digital Asset Register</center>
+            </span>
+            <div
+              class="d-lg-none" style="cursor: pointer;display: flex;flex-direction: column;justify-content: center;align-items: flex-start;" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span style="width: 30px; height: 1px; background-color: black; margin: 3px 0;"></span>
+              <span style="width: 30px; height: 1px; background-color: black; margin: 3px 0;"></span>
+              <span style="width: 30px;height: 1px; background-color: black; margin: 3px 0;"></span>
+            </div>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+              <ul class="navbar-nav ms-auto text-end">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="/create/document">Create Assets</a>
+                </li>
+                <li class="nav-item">
+                  <div class="nav-link text-danger cursor-pointer">Logout</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <!-- <div class="container mt-4 mb-5 d-flex">
+      <div id="drag" style="height: 60px; width: 300px; border: 2px dashed grey; display: flex; align-items: center; justify-content: center;">
+        <span class="text-dark text-opacity-50">Drag here</span>
+      </div>
+      <button class="btn btn-secondary rounded-0" style="width: 50px;" title="Upload picture">
+        <i class="bi bi-camera fs-5 fw-bolder"></i>
+      </button>
+    </div> -->
+
+    <div class="container">
+
+      <!-- <div id="upload-picture" class="mt-4 mb-5 d-flex">
+        <div id="drag" style="height: 60px; width: 300px; border: 2px dashed grey; display: flex; align-items: center; justify-content: center;">
+          <span class="text-dark text-opacity-50">Drag here</span>
+        </div>
+        <button class="btn btn-secondary rounded-0" style="width: 50px;" title="Upload picture">
+          <i class="bi bi-camera fs-5 fw-bolder"></i>
+        </button>
+      </div> -->
+
+
+      <div class="row">
+        <div class="col-md-8">
+
+          <div class="row" style="display: flex; align-items: center;">
+            <div class="col" style="display: flex; justify-content: left";>
+              <h5 class="mt-4"><i class="bi bi-tools"></i> Project Details</h5>
+            </div>
+            <div class="col">
+              <div id="upload-picture" class="mt-4 mb-4 d-flex">
+                <div id="drag" style="height: 60px; width: 300px; border: 2px dashed grey; display: flex; align-items: center; justify-content: center;">
+                  <span class="text-dark text-opacity-50">Drag here</span>
+                </div>
+                <button class="btn btn-secondary rounded-0" style="width: 50px;" title="Upload picture">
+                  <i class="bi bi-camera fs-5 fw-bolder"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col">
+              <div class="form-floating">
+                <select class="form-select rounded-0" id="floatingSelectGrid">
+                  <option selected></option>
+                  <option value="Ongoing">Ongoing</option>
+                  <option value="Completed">Completed</option>                 
+                </select>
+                <label for="floatingSelectGrid">select work status</label>
+              </div>
+            </div>
+  
+            <div class="col">
+              <div class="form-floating">
+                <select class="form-select rounded-0" id="floatingSelectGrid">
+                  <option selected></option>
+                  <option value="5%">5%</option>
+                  <option value="10%">10%</option>
+                  <option value="40%">40%</option>
+                  <option value="100%">100%</option>
+                </select>
+                <label for="floatingSelectGrid">select work progress</label>
+              </div>
+            </div>
+  
+            <div class="col">
+              <div class="form-floating">
+                <select class="form-select rounded-0" id="floatingSelectGrid">
+                  <option selected></option>
+                  <option value="No">No</option>
+                  <option value="Yes">Yes</option>
+                </select>
+                <label for="floatingSelectGrid">in use</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mt-4">
+            <div class="col">
+                <div class="form-floating">
+                    <select class="form-control rounded-0" id="floatingSelectGrid">
+                      <option selected></option>
+                      <option value="Other">Other</option>
+                      <option value="Mike Danwer">Mike Danwer</option>
+                      <option value="Chris Hemswarth">Chris Hemswarth</option>
+                    </select>
+                    <label for="floatingSelectGrid">Name of J.E</label>
+                  </div>
+                  
+            </div>
+  
+            <div class="col">
+              <div class="form-floating">
+                <select class="form-control rounded-0" id="floatingSelectGrid">
+                  <option selected></option>
+                  <option value="Other">Other</option>
+                  <option value="Angela Morkel">Angela Morkel</option>
+                  <option value="Georgia Meloni">Georgia Meloni</option>
+                </select>
+                <label for="floatingSelectGrid">Name of A.E</label>
+              </div>
+            </div>
+  
+            <div class="col">
+              <div class="form-floating">
+                <select class="form-control rounded-0" id="floatingSelectGrid">
+                  <option selected></option>
+                  <option value="Other">Other</option>
+                  <option value="Eva Duro">Eva Duro</option>
+                </select>
+                <label for="floatingSelectGrid">Name of E.E</label>
+              </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col">
+            <div class="form-floating">
+              <select class="form-select rounded-0" id="floatingSelectGrid">
+                <option selected></option>
+                <option value="BCD">BCD</option>
+                <option value="RWD">RWD</option>
+                <option value="MID">MID</option>
+              </select>
+              <label for="floatingSelectGrid">Implementing Agency</label>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="form-floating">
+              <select class="form-select rounded-0" id="floatingSelectGrid">
+                <option selected></option>
+                <option value="15th Finance">15th Finance</option>
+                <option value="DMFT">DMFT</option>
+                <option value="13th Finance">13th Finance</option>
+              </select>
+              <label for="floatingSelectGrid">Funding Agency/Scheme</label>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="form-floating">
+              <select class="form-select rounded-0" id="floatingSelectGrid">
+                <option selected></option>
+                <option value="Other">Other</option>
+                <option value="Public">Public</option>
+                <option value="Department">Department</option>
+              </select>
+              <label for="floatingSelectGrid">User Agency</label>
+            </div>
+          </div>
+      </div>
+
+      <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control rounded-0" id="floatingInput" >
+                <label for="floatingInput">Asset Type</label>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control rounded-0" id="floatingInput" placeholder="name@example.com" >
+                <label for="floatingInput" class="text-dark text-opacity-75">Asset Name</label>
+            </div>
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <div class="col">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control rounded-0" id="floatingInput" placeholder="name@example.com" >
+                <label for="floatingInput" class="text-dark text-opacity-75">Asset description</label>
+            </div>
+        </div>
+      </div>
+
+    <div class="row mt-4">
+      <div class="col">
+          <div class="form-floating mb-3">
+              <input type="text" class="form-control rounded-0" id="floatingInput" placeholder="name@example.com">
+              <label for="floatingInput" class="text-dark text-opacity-75">Address</label>
+          </div>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+            <div class="col">
+              <div class="form-floating">
+                <select class="form-select rounded-0" id="floatingSelectGrid">
+                  <option selected></option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+                <label for="floatingSelectGrid">State</label>
+              </div>
+            </div>
+  
+            <div class="col">
+                <form class="form-floating">
+                    <input type="email" class="form-control rounded-0" id="floatingInputValue" placeholder="name@example.com" value="Ramgarh">
+                    <label for="floatingInputValue">District</label>
+                  </form>
+            </div>
+  
+            <div class="col">
+              <div class="form-floating">
+                <select class="form-control rounded-0" id="floatingSelectGrid">
+                  <option selected></option>
+                  <option value="No">Block 1</option>
+                  <option value="Yes">Block 2</option>
+                </select>
+                <label for="floatingSelectGrid">Block</label>
+              </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col">
+            <div class="form-floating">
+              <select class="form-control rounded-0" id="floatingSelectGrid">
+                <option selected></option>
+                <option value="1">Panchayat 1</option>
+                <option value="2">Panchayat 2</option>
+                <option value="3">Panchayat 3</option>
+              </select>
+              <label for="floatingSelectGrid">Panchayat</label>
+            </div>
+          </div>
+
+          <div class="col">
+              <div class="form-floating">
+                  <input type="text" class="form-control rounded-0" id="floatingInput" placeholder="name@example.com">
+                  <label for="floatingInput">Village</label>
+                </div>
+          </div>
+
+          <div class="col">
+              <div class="form-floating">
+                  <input type="text" class="form-control rounded-0" id="floatingInput" placeholder="name@example.com">
+                  <label for="floatingInput">Pin Code</label>
+                </div>
+          </div>
+      </div>
+
+      <div class="row mt-4">
+        <div class="col">
+            <div class="form-floating">
+                <input type="text" class="form-control rounded-0" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Latitude</label>
+              </div>
+        </div>
+
+        <div class="col">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control rounded-0" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Longitude</label>
+              </div>
+        </div>
+
+        <div class="col">
+          <div class="form-floating">
+            <select class="form-select rounded-0" id="floatingSelectGrid">
+              <option selected></option>
+              <option value="No">Public</option>
+              <option value="Yes">Department</option>
+              <option value="Yes">Individual</option>
+            </select>
+            <label for="floatingSelectGrid">Type of beneficiary</label>
+          </div>
+        </div>
+    </div>
+
+
+        </div>
+        <div class="col-md-4 px-4 bg-light">
+          <div id="contractor-details">
+            <h5 class="m-4"><i class="bi bi-person-workspace"></i> Contractor</h5>
+
+            <div class="form-floating mb-4">
+                <input type="text" class="form-control rounded-0" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Registration/Licence No</label>
+              </div>
+
+              <div class="form-floating mb-4">
+                <input type="text" class="form-control rounded-0" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Name</label>
+              </div>
+
+              <div class="form-floating mb-4">
+                <input type="text" class="form-control rounded-0" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Company</label>
+              </div>
+
+              <div class="form-floating mb-4">
+                <input type="text" class="form-control rounded-0" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Contact No</label>
+              </div>
+
+              <div class="form-floating mb-4">
+                <input type="text" class="form-control rounded-0" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Address</label>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                    <div class="form-floating">
+                        <input type="text" class="form-control rounded-0" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">District</label>
+                      </div>
+                </div>
+                <div class="col">
+                    <div class="form-floating">
+                        <select class="form-select rounded-0" id="floatingSelectGrid">
+                          <option selected></option>
+                          <option value="Andhra Pradesh">Andhra Pradesh</option>
+                          <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                        </select>
+                        <label for="floatingSelectGrid">State</label>
+                      </div>
+                </div>
+              </div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-4 p-4 shadow">
+      <h5 class="mb-4 p-2"><i class="bi bi-credit-card"></i> Financial Details</h5>
+  
+      <div class="row mb-3">
+          <div class="col-12 col-sm-6 col-md-4 mb-3">
+              <div class="form-floating">
+                  <input type="text" class="form-control rounded-0" id="floatingInput" placeholder="name@example.com">
+                  <label for="floatingInput">Agreement cost</label>
+              </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 mb-3">
+              <form class="form-floating">
+                  <input type="date" class="form-control rounded-0" id="floatingInputValue" placeholder="name@example.com" value="dd/mm/yy">
+                  <label for="floatingInputValue">Agreement Date</label>
+              </form>
+          </div>
+      </div>
+  
+      <div class="row mb-3">
+          <div class="col-12 col-sm-6 col-md-4 mb-3">
+              <div class="form-floating">
+                  <input type="text" class="form-control rounded-0" id="floatingInput" placeholder="name@example.com">
+                  <label for="floatingInput">Estimated cost</label>
+              </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 mb-3">
+              <form class="form-floating">
+                  <input type="date" class="form-control rounded-0" id="floatingInputValue" placeholder="name@example.com" value="dd/mm/yy">
+                  <label for="floatingInputValue">Estimated Work Start Date</label>
+              </form>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 mb-3">
+              <div class="form-floating">
+                  <input type="text" class="form-control rounded-0" id="floatingInput" placeholder="name@example.com">
+                  <label for="floatingInput">Estimated Work finish by days</label>
+              </div>
+          </div>
+      </div>
+  
+      <div class="row mb-3">
+          <div class="col-12 col-sm-6 col-md-4 mb-3">
+              <form class="form-floating">
+                  <input type="date" class="form-control rounded-0" id="floatingInputValue" placeholder="name@example.com" value="dd/mm/yy">
+                  <label for="floatingInputValue">Work Start Date</label>
+              </form>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 mb-3">
+              <form class="form-floating">
+                  <input type="date" class="form-control rounded-0" id="floatingInputValue" placeholder="name@example.com" value="dd/mm/yy">
+                  <label for="floatingInputValue">Work finish Date</label>
+              </form>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 mb-3">
+              <div class="form-floating">
+                  <input type="text" class="form-control rounded-0" id="floatingInput" placeholder="name@example.com" value="0">
+                  <label for="floatingInput">Maintenance period in days</label>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+
+    <div class="container mt-4 mb-5 text-end">
+      
+      <input class="btn btn-secondary rounded-0" style="width: 120px;" type = "reset" value="reset">
+      <input class="btn btn-primary rounded-0" style="width: 120px;" type="sumbit" value="submit">
+
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
